@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cccb8xxepn5q6"]
+
+[ext_resource type="PackedScene" uid="uid://buwi1qqxf7j6n" path="res://Models/JarJarB.glb" id="1_sy6so"]
+[ext_resource type="Script" uid="uid://bjiu5smm85knw" path="res://camera.gd" id="2_44edo"]
+[ext_resource type="Texture2D" uid="uid://cxyi0kqfqbyj4" path="res://Images/dessin_lea.jpg" id="3_xp48b"]
+
+[node name="JarJarB" instance=ExtResource("1_sy6so")]
+
+[node name="Cylinder" parent="." index="0"]
+transform = Transform3D(-0.330837, 0, 0.0526479, 0, 0.335, 0, -0.0526479, 0, -0.330837, 1.0589, -1.8978, -9.5549)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
+
+[node name="Camera3D" type="Camera3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.987195, -0.15952, 0, 0.15952, 0.987195, 1.67317, 0.615349, -3.29745)
+script = ExtResource("2_44edo")
+
+[node name="Node3D" type="Node3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76958, 0, -10.8096)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D" index="0"]
+texture = ExtResource("3_xp48b")
